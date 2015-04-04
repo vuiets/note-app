@@ -1,9 +1,11 @@
 {{view "navBar"}}
 <div class="container">
-    <div class="row">
+    <div class="row-fluid">
         <div class="col-md-9 main bootcards-cards">
             <p class="lead">Make Crisp Notes. Not War.</p>
-            {{note-card}}
+            {{#each note in model}}
+                {{note-card data=note}}
+            {{/each}}
         </div>
         {{view "sideBar"}}
     </div>
