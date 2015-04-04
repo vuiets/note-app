@@ -39,3 +39,7 @@ body {
   color: #FFF;
   font-size: 25px;
 }
+
+.card-footer {
+  padding-left: 80px;
+}

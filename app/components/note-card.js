@@ -1,5 +1,5 @@
 import Ember from 'ember';
-import App from './../app.js'
+import App from './../app.js';
 
 export default Ember.Component.extend({
     data: null,
@@ -11,6 +11,10 @@ export default Ember.Component.extend({
     }.property('data'),
 
     actions: {
+      edit: function() {
+        this.set('isEdit', true);
+      },
+
       saveNote: function(note) {
         var self = this;
         note.save().then(function(success){

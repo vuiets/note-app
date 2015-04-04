@@ -1,6 +1,6 @@
 <div class="col-md-4">
-    <div class="panel panel-default bootcards-richtext">
       {{#if isEdit}}
+      <div class="panel panel-default bootcards-richtext">
 	      <div class="panel-heading">
 	        <div class="form-group">
 		        {{input class="form-control" placeholder="Title" value=data.title type="text"}}
@@ -15,9 +15,13 @@
             <li>{{data.priority}}</li>
 		        <li {{action "nextPriority" data.priority}}><a>Next</a></li>
 	        </ul>
-          <button class="btn btn-sm btn-default" {{action "saveNote" data}}><strong>Done</strong></button>
+          <div class="card-footer">
+            <button class="btn btn-sm btn-default" {{action "saveNote" data}}><strong>Done</strong></button>
+	        </div>
         </div>
+      </div>
       {{else}}
+      <div class="panel panel-default bootcards-richtext" {{action "edit"}}>
         <div class="panel-heading">
           <h3 class="panel-title">{{data.title}}</h3>
         </div>
@@ -27,6 +31,6 @@
         <div class="panel-footer">
           <small>{{data.priority}}</small>
         </div>
+      </div>
       {{/if}}
-    </div>
 </div>
