@@ -14,5 +14,11 @@ export default Ember.Controller.extend({
 
     trivialNotes: function(){
         return this.get('model').filterBy('priority', 'trivial');
-    }.property('model@each')
+    }.property('model@each'),
+
+    actions: {
+        addNote: function() {
+            this.store.createRecord('note');
+        }
+    }
 });
