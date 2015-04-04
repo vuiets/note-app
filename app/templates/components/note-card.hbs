@@ -10,7 +10,11 @@
           {{textarea class="form-control" value=data.description placeholder="Description"}}
 	      </div>
 	      <div class="panel-footer">
-          {{input class="form-control" value=data.priority placeholder="Priority" type="text"}}
+	        <ul class="pager">
+		        <li {{action "prevPriority" data.priority}}><a>Prev</a></li>
+            <li>{{data.priority}}</li>
+		        <li {{action "nextPriority" data.priority}}><a>Next</a></li>
+	        </ul>
           <button class="btn btn-sm btn-default" {{action "saveNote" data}}><strong>Done</strong></button>
         </div>
       {{else}}
