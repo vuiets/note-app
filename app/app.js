@@ -13,4 +13,6 @@ var App = Ember.Application.extend({
 
 loadInitializers(App, config.modulePrefix);
 
+App.NOTE_PRIORITY = ['Trivial','Important','Critical'];
+
 export default App;

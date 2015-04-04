@@ -3,42 +3,48 @@
     <table class="table">
         <thead>
             <tr></tr>
-              <th>
-                  High
-              </th>
+            <th>
+	              Critical
+            </th>
         </thead>
         <tbody>
-          <tr>
-	          <td>
-		          Jushiro Ukitake
-	          </td>
-          </tr>
+            <tr>
+                {{#each note in criticalNotes}}
+                    <td>
+                        {{note.title}}
+                    </td>
+                {{/each}}
+            </tr>
         </tbody>
         <thead>
             <tr></tr>
-              <th>
-                  Med
-              </th>
+            <th>
+                Important
+            </th>
         </thead>
         <tbody>
-          <tr>
-	          <td>
-		          Jushiro Ukitake
-	          </td>
-          </tr>
+            <tr>
+                {{#each note in importantNotes}}
+                    <td>
+                        {{note.title}}
+                    </td>
+                {{/each}}
+            </tr>
         </tbody>
         <thead>
             <tr></tr>
-              <th>
-                  Low
-              </th>
+            <th>
+	              Trivial
+            </th>
         </thead>
         <tbody>
-          <tr>
-	          <td>
-		          Jushiro Ukitake
-	          </td>
-          </tr>
+            <tr>
+                {{#each note in trivialNotes}}
+                    <td>
+                        {{note.title}}
+                    </td>
+                {{/each}}
+            </tr>
         </tbody>
     </table>
 </div>
