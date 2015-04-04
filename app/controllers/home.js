@@ -5,16 +5,17 @@ export default Ember.Controller.extend({
     notePriorities: App.NOTE_PRIORITY,
 
     criticalNotes: function(){
+      console.log('criticalNotes');
         return this.get('model').filterBy('priority', 'critical');
-    }.property('model@each'),
+    }.property('model.[]'),
 
     importantNotes: function(){
         return this.get('model').filterBy('priority', 'important');
-    }.property('model@each'),
+    }.property('model.[]'),
 
     trivialNotes: function(){
         return this.get('model').filterBy('priority', 'trivial');
-    }.property('model@each'),
+    }.property('model.[]'),
 
     actions: {
         addNote: function() {

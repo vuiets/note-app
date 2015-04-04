@@ -1,13 +1,28 @@
 <div class="col-md-4">
     <div class="panel panel-default bootcards-richtext">
-      <div class="panel-heading">
-        <h3 class="panel-title">{{data.title}}</h3>
-      </div>
-      <div class="panel-body">
-        <p>{{data.description}}</p>
-      </div>
-      <div class="panel-footer">
-        <small>Priority</small>
-      </div>
+      {{#if isEdit}}
+	      <div class="panel-heading">
+	        <div class="form-group">
+		        {{input class="form-control" placeholder="Title" value=data.title type="text"}}
+	        </div>
+	      </div>
+	      <div class="panel-body">
+          {{textarea class="form-control" value=data.description placeholder="Description"}}
+	      </div>
+	      <div class="panel-footer">
+          {{input class="form-control" value=data.priority placeholder="Priority" type="text"}}
+          <button class="btn btn-sm btn-default" {{action "saveNote" data}}><strong>Done</strong></button>
+        </div>
+      {{else}}
+        <div class="panel-heading">
+          <h3 class="panel-title">{{data.title}}</h3>
+        </div>
+        <div class="panel-body">
+          <p>{{data.description}}</p>
+        </div>
+        <div class="panel-footer">
+          <small>{{data.priority}}</small>
+        </div>
+      {{/if}}
     </div>
 </div>
