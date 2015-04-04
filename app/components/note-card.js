@@ -4,7 +4,7 @@ export default Ember.Component.extend({
     data: null,
 
     isEdit: function(){
-      return !this.get('data.title') && !this.get('data.description') && !this.get('data.priority');
+      return !this.get('data.title') && !this.get('data.description');
     }.property('data'),
 
     actions: {

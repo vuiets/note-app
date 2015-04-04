@@ -3,7 +3,9 @@ import DS from 'ember-data';
 var Note = DS.Model.extend({
     title: DS.attr('string'),
     description: DS.attr('string'),
-    priority: DS.attr('string')
+    priority: DS.attr('string', {
+      defaultValue: function() { return "trivial" }
+    })
 });
 
 Note.reopenClass({

@@ -8,13 +8,13 @@
             </th>
         </thead>
         <tbody>
-            <tr>
+            <td>
                 {{#each note in criticalNotes}}
-                    <td>
+                    <tr>
                         {{note.title}}
-                    </td>
+                    </tr>
                 {{/each}}
-            </tr>
+            </td>
         </tbody>
         <thead>
             <tr></tr>
@@ -23,13 +23,13 @@
             </th>
         </thead>
         <tbody>
-            <tr>
+            <td>
                 {{#each note in importantNotes}}
-                    <td>
+                    <tr>
                         {{note.title}}
-                    </td>
+                    </tr>
                 {{/each}}
-            </tr>
+            </td>
         </tbody>
         <thead>
             <tr></tr>
@@ -38,13 +38,13 @@
             </th>
         </thead>
         <tbody>
-            <tr>
+            <td>
                 {{#each note in trivialNotes}}
-                    <td>
+                    <tr>
                         {{note.title}}
-                    </td>
+                    </tr>
                 {{/each}}
-            </tr>
+            </td>
         </tbody>
     </table>
 </div>
