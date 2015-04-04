@@ -1,0 +1,50 @@
+<div class='col-md-3 sidebar'>
+    <h4>Status</h4>
+    <table class="table">
+        <thead>
+            <tr></tr>
+            <th>
+	              Critical
+            </th>
+        </thead>
+        <tbody>
+            <td>
+                {{#each note in criticalNotes}}
+                    <tr>
+                        {{note.title}}
+                    </tr>
+                {{/each}}
+            </td>
+        </tbody>
+        <thead>
+            <tr></tr>
+            <th>
+                Important
+            </th>
+        </thead>
+        <tbody>
+            <td>
+                {{#each note in importantNotes}}
+                    <tr>
+                        {{note.title}}
+                    </tr>
+                {{/each}}
+            </td>
+        </tbody>
+        <thead>
+            <tr></tr>
+            <th>
+	              Trivial
+            </th>
+        </thead>
+        <tbody>
+            <td>
+                {{#each note in trivialNotes}}
+                    <tr>
+                        {{note.title}}
+                    </tr>
+                {{/each}}
+            </td>
+        </tbody>
+    </table>
+</div>

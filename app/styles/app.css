@@ -1,0 +1,45 @@
+body {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  background-color: #FFF;
+}
+
+.sidebar {
+  position: fixed;
+  right: 0;
+}
+
+.footer {
+	position: fixed;
+	bottom: 0px;
+	width: 100%;
+}
+
+.wrapper {
+  position: relative;
+  width: 5%;
+  margin: 30px auto;
+}
+.wrapper:after {
+  padding-top: 100%; /*1:1 ratio*/
+  display: block;
+  content: '';
+}
+.circle {
+  position: absolute;
+  top: 0; bottom: 0; right: 0; left: 0;
+  border-radius: 100px;
+  background-color: rgb(0, 0, 0);
+}
+
+.glyphicon-plus {
+  position: absolute;
+  padding-top: 16px;
+  padding-left: 18px;
+  color: #FFF;
+  font-size: 25px;
+}
+
+.card-footer {
+  padding-left: 80px;
+}
